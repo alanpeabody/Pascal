@@ -15,6 +15,8 @@ defmodule Pascal.Mixfile do
   # Returns the list of dependencies in the format:
   # { :foobar, "0.1", git: "https://github.com/elixir-lang/foobar.git" }
   defp deps do
-    []
+    [
+      { :cowboy, github: "extend/cowboy", tag: "0.6.1" }
+    ]
   end
 end

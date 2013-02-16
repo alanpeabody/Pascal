@@ -1,4 +1,14 @@
 defmodule Pascal.Triangle do
+  @moduledoc """
+    Generates Pascal's Triangles.
+
+    ## Examples
+
+      Pascal.Triangle.generate(3)
+      #=> [[0,1,0],
+           [0,1,1,0],
+           [0,1,2,1,0]]
+  """
 
   def generate(0) do
     []
@@ -25,6 +35,7 @@ defmodule Pascal.Triangle do
     [0 | final]
   end
 
+  @doc "Recurs through the previous list, adding to new list each time."
   defp add_row([h | t], last, current) do
     add_row(t, h, [h + last | current])
   end

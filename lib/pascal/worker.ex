@@ -9,6 +9,6 @@ defmodule Pascal.Worker do
   """
 
   def handle_call({:rows, rows}, _from, state) do
-    {:reply, Pascal.Triangle.generate(rows), state}
+    {:reply, Triangle.generate(rows), state}
   end
 end
