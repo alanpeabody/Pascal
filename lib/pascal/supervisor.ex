@@ -8,7 +8,7 @@ defmodule Pascal.Supervisor do
   def init([]) do
     children = [
       # Define workers and child supervisors to be supervised
-      # worker(Pascal.Worker, [])
+      worker(Pascal.Worker, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/Supervisor.Behaviour.html
