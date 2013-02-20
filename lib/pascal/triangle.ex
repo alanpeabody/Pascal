@@ -35,7 +35,11 @@ defmodule Pascal.Triangle do
     [0 | final]
   end
 
-  @doc "Recurs through the previous list, adding to new list each time."
+  # Recurs through the previous list, adding to new list each time."
+  # 1: add_row([0,1,0], 0, [])
+  # 2: add_row([1,0], 0, [0])
+  # 3: add_row([0], 1, [1,0])
+  # 4: add_row([], 0, [1,1,0])
   defp add_row([h | t], last, current) do
     add_row(t, h, [h + last | current])
   end
