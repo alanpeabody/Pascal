@@ -9,14 +9,14 @@ defmodule Pascal.Mixfile do
 
   # Configuration for the OTP application
   def application do
-    [ mod: { Pascal, [] },
-      applications: [:cowboy] ]
+    [mod: { Pascal, [] }]
   end
 
   # Returns the list of dependencies in the format:
   # { :foobar, "0.1", git: "https://github.com/elixir-lang/foobar.git" }
   defp deps do
-    [ {:ranch, github: "extend/ranch", tag: "0.6.1"},
-      {:cowboy, github: "extend/cowboy", tag: "0.8.0"} ]
+    [
+      { :cowboy, github: "extend/cowboy", tag: "0.6.1" }
+    ]
   end
 end

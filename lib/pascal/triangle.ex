@@ -19,7 +19,7 @@ defmodule Pascal.Triangle do
   end
 
   defp generate(tri, max, current) when current >= max do
-    Enum.reverse(tri)
+    :lists.reverse(tri)
   end
 
   defp generate(tri, max, current) do
@@ -35,7 +35,7 @@ defmodule Pascal.Triangle do
     [0 | final]
   end
 
-  # Recurs through the previous list, adding to new list each time.
+  @doc "Recurs through the previous list, adding to new list each time."
   defp add_row([h | t], last, current) do
     add_row(t, h, [h + last | current])
   end
