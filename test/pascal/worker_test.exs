@@ -5,7 +5,8 @@ defmodule WorkerTest do
 
   test "server handles calls correctly" do
    { :ok, pid } = :gen_server.start_link(Pascal.Worker, [], [])
-   assert :gen_server.call(pid, {:rows, 1}) == [[0,1,0]]
+   assert :gen_server.call(pid, {:rows, 1}) == {:triangle, [[0,1,0]]}
+   assert :gen_server.call(pid, {:rows, 2}) == {:triangle, [[0,1,0],[0,1,1,0]]}
   end
 
 end
